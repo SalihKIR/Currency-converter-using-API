@@ -13,6 +13,9 @@
 		D49A8E19280EA95C005CE72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49A8E17280EA95C005CE72C /* Main.storyboard */; };
 		D49A8E1B280EA95E005CE72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49A8E1A280EA95E005CE72C /* Assets.xcassets */; };
 		D49A8E1E280EA95E005CE72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49A8E1C280EA95E005CE72C /* LaunchScreen.storyboard */; };
+		D49A8E27280EBECF005CE72C /* DetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49A8E26280EBECF005CE72C /* DetailVC.storyboard */; };
+		D49A8E29280EBF32005CE72C /* DetailvViewContoroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A8E28280EBF32005CE72C /* DetailvViewContoroller.swift */; };
+		D49A8E2C280EC4FC005CE72C /* extantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49A8E2B280EC4FC005CE72C /* extantion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D49A8E1A280EA95E005CE72C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D49A8E1D280EA95E005CE72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D49A8E1F280EA95E005CE72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49A8E26280EBECF005CE72C /* DetailVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailVC.storyboard; sourceTree = "<group>"; };
+		D49A8E28280EBF32005CE72C /* DetailvViewContoroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailvViewContoroller.swift; sourceTree = "<group>"; };
+		D49A8E2B280EC4FC005CE72C /* extantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extantion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		D49A8E10280EA95C005CE72C /* Currency converter using API */ = {
 			isa = PBXGroup;
 			children = (
+				D49A8E2A280EC4DD005CE72C /* Extention */,
+				D49A8E25280EBD19005CE72C /* viewController */,
 				D49A8E11280EA95C005CE72C /* AppDelegate.swift */,
 				D49A8E13280EA95C005CE72C /* SceneDelegate.swift */,
-				D49A8E15280EA95C005CE72C /* ViewController.swift */,
-				D49A8E17280EA95C005CE72C /* Main.storyboard */,
 				D49A8E1A280EA95E005CE72C /* Assets.xcassets */,
 				D49A8E1C280EA95E005CE72C /* LaunchScreen.storyboard */,
 				D49A8E1F280EA95E005CE72C /* Info.plist */,
 			);
 			path = "Currency converter using API";
+			sourceTree = "<group>";
+		};
+		D49A8E25280EBD19005CE72C /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				D49A8E17280EA95C005CE72C /* Main.storyboard */,
+				D49A8E15280EA95C005CE72C /* ViewController.swift */,
+				D49A8E26280EBECF005CE72C /* DetailVC.storyboard */,
+				D49A8E28280EBF32005CE72C /* DetailvViewContoroller.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		D49A8E2A280EC4DD005CE72C /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				D49A8E2B280EC4FC005CE72C /* extantion.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +152,7 @@
 			files = (
 				D49A8E1E280EA95E005CE72C /* LaunchScreen.storyboard in Resources */,
 				D49A8E1B280EA95E005CE72C /* Assets.xcassets in Resources */,
+				D49A8E27280EBECF005CE72C /* DetailVC.storyboard in Resources */,
 				D49A8E19280EA95C005CE72C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +166,8 @@
 			files = (
 				D49A8E16280EA95C005CE72C /* ViewController.swift in Sources */,
 				D49A8E12280EA95C005CE72C /* AppDelegate.swift in Sources */,
+				D49A8E2C280EC4FC005CE72C /* extantion.swift in Sources */,
+				D49A8E29280EBF32005CE72C /* DetailvViewContoroller.swift in Sources */,
 				D49A8E14280EA95C005CE72C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
