@@ -65,6 +65,27 @@ class DetailvViewContoroller: UIViewController {
                             if let rates = jsonReponse["rates"] as? [String: Any]{
                                 if let cad = rates["CAD"] as? Double{
                                     print(cad)
+                                    cadLabel.text = "CAD : \(cad)"
+                                }
+                                if let chf = rates["CHF"] as? Double{
+                                    print(chf)
+                                    chfLabel.text = "CHF : \(chf)"
+                                }
+                                if let gbp = rates["GBP"] as? Double{
+                                    print(gbp)
+                                    gbpLabel.text = "GBP : \(gbp)"
+                                }
+                                if let jpy = rates["JPY"] as? Double{
+                                    print(jpy)
+                                    jpyLabel.text = "JPY : \(jpy)"
+                                }
+                                if let usd = rates["USD"] as? Double{
+                                    print(usd)
+                                    usdLabel.text = "USD : \(usd)"
+                                }
+                                if let tl = rates["TRY"] as? Double{
+                                    print(tl)
+                                    tryLabel.text = "TRY : \(tl)"
                                 }
                                 //getvval(value: "CAD")
                             }
