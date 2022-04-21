@@ -9,7 +9,7 @@ class DetailvViewContoroller: UIViewController {
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var tryLabel: UILabel!
     @IBOutlet weak var replayButtons: UIButton!
-    var val = [String: Any]()
+    let rates = [String: Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
 //Button edit
@@ -49,18 +49,26 @@ class DetailvViewContoroller: UIViewController {
                 if data != nil {
                     
                     do{
-                        var jsonReponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, Any>
+                        let jsonReponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, Any>
                         
                         //ASYNC
-                        DispatchQueue.main.async {
+                        DispatchQueue.main.async { [self] in
                                 //print(jsonReponse)
                             //print(jsonReponse["rates"])//Optinal olarak veri girişi
                             
                             
+//                            if let rates = jsonReponse["CAD"] as? [String: Any]{
+//                                print(rates)
+//
+//                            }
+                            //getvval(value: "USD")
                             if let rates = jsonReponse["rates"] as? [String: Any]{
-                                print(rates)
-
+                                if let cad = rates["CAD"] as? Double{
+                                    print(cad)
+                                }
+                                //getvval(value: "CAD")
                             }
+                            
                         }
                         
                     }catch{
@@ -72,12 +80,11 @@ class DetailvViewContoroller: UIViewController {
         task.resume()
     }
     
-    func getvval(value: String ){
-        if let val = val[value] as? [String: Any]{
-            print(val)
-            
-        }
-    }
+//    func getvval(value: String ){
+//            if let scope = rates[value] as? Double{
+//                print(scope)
+//            }
+//    }
 
 
 }
