@@ -27,7 +27,7 @@ class DetailvViewContoroller: UIViewController {
     @IBAction func replayButton(_ sender: Any) {
         // 1-) Request & Session
         // 2-) Response & Data
-        // 3-) Parsing & Serialization
+        // 3-) Parsing & JSON - Serialization
 
         // 1-)
         let url = URL(string: "http://data.fixer.io/api/latest?access_key=5c44a00de4b7024ae4236fc7a833e49d")
@@ -47,11 +47,21 @@ class DetailvViewContoroller: UIViewController {
                 // 2-)
                 if data != nil {
                     
-                    
+                    do{
+                        let jsonReponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                        
+                        //ASYNC
+                        DispatchQueue.main.async {
+                                print(jsonReponse)
+                        }
+                        
+                    }catch{
+                        print("Error")
+                    }
                 }
             }
         }
-        
+        task.resume()
     }
     
 
