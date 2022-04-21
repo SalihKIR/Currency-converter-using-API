@@ -9,6 +9,7 @@ class DetailvViewContoroller: UIViewController {
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var tryLabel: UILabel!
     @IBOutlet weak var replayButtons: UIButton!
+    var val = [String: Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
 //Button edit
@@ -48,11 +49,18 @@ class DetailvViewContoroller: UIViewController {
                 if data != nil {
                     
                     do{
-                        let jsonReponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                        var jsonReponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, Any>
                         
                         //ASYNC
                         DispatchQueue.main.async {
-                                print(jsonReponse)
+                                //print(jsonReponse)
+                            //print(jsonReponse["rates"])//Optinal olarak veri girişi
+                            
+                            
+                            if let rates = jsonReponse["rates"] as? [String: Any]{
+                                print(rates)
+
+                            }
                         }
                         
                     }catch{
@@ -64,6 +72,12 @@ class DetailvViewContoroller: UIViewController {
         task.resume()
     }
     
+    func getvval(value: String ){
+        if let val = val[value] as? [String: Any]{
+            print(val)
+            
+        }
+    }
 
 
 }
